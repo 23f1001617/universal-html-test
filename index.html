@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal HTML Test</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+            color: blue;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Universal HTML Test Works!</h1>
+        <button id="toggle-button">Toggle Dark/Light Mode</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('toggle-button');
+            button.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- build-id: 2025-10-15T16:40:25.334659 -->
