@@ -13,32 +13,33 @@
             margin: 0;
             background-color: white;
             color: blue;
-            transition: background-color 0.5s, color 0.5s;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: black;
+            color: white;
         }
         button {
             margin-top: 20px;
             padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
-        }
-        .dark-mode {
-            background-color: black;
-            color: white;
         }
     </style>
 </head>
 <body>
     <div>
         <h1>Universal HTML Test Works!</h1>
-        <button id="toggle-button">Toggle Dark/Light Mode</button>
+        <button id="toggle-btn">Toggle Dark/Light Mode</button>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const button = document.getElementById('toggle-button');
+        window.onload = function() {
+            const button = document.getElementById('toggle-btn');
             button.addEventListener('click', function() {
                 document.body.classList.toggle('dark-mode');
             });
-        });
+        };
     </script>
 </body>
 </html>
-<!-- build-id: 2025-10-15T16:40:25.334659 -->
+<!-- build-id: 2025-10-15T16:41:31.978504 -->
